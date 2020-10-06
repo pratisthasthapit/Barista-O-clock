@@ -173,7 +173,7 @@ header{
 }
 
 .dark-background{
-  background-color: var(--main-font-color-dark);
+  background-color: #000000;
 }
 /* Header background */
 .header-background {
@@ -464,13 +464,21 @@ header{
 /* my projects */
 .image-group{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.8rem;
 }
 
 .discover-our-menu .container-description{
   padding-top: 3rem;
   margin-bottom: 0;
+}
+
+.cafe-img{
+  padding: 4rem;
+}
+
+.padding-cafe-img{
+  padding-right: 2rem;
 }
 
 /* The perfect blend */
@@ -694,6 +702,59 @@ footer{
   display: none;
 }
 
+/* Cafe menu */
+.menu-row{
+  display: flex;
+  padding:1rem;
+  overflow:hidden;
+  width:90%;
+}
+
+.text-box{
+  flex: 0 0 auto;
+}
+
+.dots-box{
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.dots-box:before{
+  position:absolute;
+  bottom: 5px;
+  width: 94%;
+  border-bottom: 1px dotted #000;
+  content: '';
+  left: 3%;
+}
+
+.underline{
+  border-bottom: 5px solid var(--secondary-font-color);
+  padding-bottom: 3px;
+}
+
+/* Opening hours */
+.opening-hours{
+  display: flex;
+  padding:1rem;
+  overflow:hidden;
+  width:100%;
+}
+
+.hours-dots-box{
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.hours-dots-box:before{
+  position:absolute;
+  bottom: 5px;
+  width: 94%;
+  border-bottom: 1px dotted #fff;
+  content: '';
+  left: 3%;
+}
+
 /* Media queries */
 /* Tablet */
 @media only screen and (min-width: 600px) {
@@ -832,6 +893,11 @@ footer{
 
   .line{
     max-width: 11.4rem;
+  }
+
+  .cafe-menu{
+    width: 70%;
+    text-align: center;
   }
 
   .info-container{
